@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useDebounce, usePopupState, usePagination } from "../hooks";
 import { Button, BackButton, SearchInput, UsersTable, Pagination, FormUser } from "../components";
+import { toast } from "react-toastify";
 
 const API_BASE = "https://mongo-db-crud-react.vercel.app";
 const DEFAULT_VALUE = {
@@ -68,6 +69,7 @@ const UserPage = () => {
                 console.log("Add new user successfully!");
             }
             setUpdateUI((prevState) => !prevState);
+            toast.success("Added user successfully");
             closePopup();
         } catch (error) {
             console.error("Error:", error);
@@ -78,6 +80,7 @@ const UserPage = () => {
         try {
             await axios.delete(`${API_BASE}/user/${id}`);
             setUpdateUI((prevState) => !prevState);
+            toast.success("Deleted user!")
         } catch (error) {
             console.error("Error: ", error);
         }
@@ -100,8 +103,9 @@ const UserPage = () => {
             await axios.put(`${API_BASE}/user/${userID}`, updateData, {
                 headers: { "Content-Type": "application/json" },
             });
-            closeUpdatePopup();
             setUpdateUI((prevState) => !prevState);
+            toast.info("Updated user information");
+            closeUpdatePopup();
         } catch (error) {
             console.error("Error: ", error);
         }

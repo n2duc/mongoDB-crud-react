@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 import { usePopupState, useDebounce, usePagination } from "../hooks";
 import { Button, BackButton, SearchInput, ProductTable, Pagination, FormPopup } from "../components";
 
@@ -59,6 +60,7 @@ const ProductPage = () => {
                 products.filter((product) => product._id !== data._id)
             );
             setUpdateUI((prevState) => !prevState);
+            toast.success("Deleted product!")
         } catch (error) {
             console.error("Error deleting product:", error);
         }
@@ -76,6 +78,7 @@ const ProductPage = () => {
             const data = response.data;
             setProducts([...products, data]);
             setUpdateUI((prevState) => !prevState);
+            toast.success("Added products successfully");
             closePopup();
         } catch (error) {
             console.error("Error adding product:", error);
@@ -101,6 +104,7 @@ const ProductPage = () => {
             });
             closeUpdatePopup();
             setUpdateUI((prevState) => !prevState);
+            toast.info("Updated product information");
         } catch (error) {
             console.error("Error updating product:", error);
         }

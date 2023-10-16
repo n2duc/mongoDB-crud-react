@@ -25,6 +25,10 @@ input::-webkit-inner-spin-button {
     animation-delay: -0.5s;
 }
 
+.Toastify__toast-theme--dark {
+    @apply bg-slate-800 text-slate-200;
+}
+
 @keyframes lds-ripple {
     0% {
         top: 36px;
