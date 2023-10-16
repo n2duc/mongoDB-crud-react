@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { usePopupState, useDebounce, usePagination } from "../hooks";
 import { Button, BackButton, SearchInput, ProductTable, Pagination, FormPopup } from "../components";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://mongo-db-crud-react.vercel.app";
 const DEFAULT_VALUE = { name: "", color: "Black", brand: "", price: 0 };
 
 const ProductPage = () => {
