@@ -1,14 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { usePopupState, useDebounce } from "../hooks";
-
-import Button from "../components/Button";
-import ProductTable from "../components/ProductTable";
-import FormPopup from "../components/FormPopup";
-import SearchInput from "../components/SearchInput";
-import Pagination from "../components/Pagination";
-import BackButton from "../components/BackButton";
-import usePagination from "../hooks/usePagination";
+import { usePopupState, useDebounce, usePagination } from "../hooks";
+import { Button, BackButton, SearchInput, ProductTable, Pagination, FormPopup } from "../components";
 
 const API_BASE = "http://localhost:5000";
 const DEFAULT_VALUE = { name: "", color: "Black", brand: "", price: 0 };

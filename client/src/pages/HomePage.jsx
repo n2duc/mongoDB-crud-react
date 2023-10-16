@@ -9,7 +9,7 @@ const HomePage = () => {
                 <p className="mb-5 mx-auto w-3/5 text-lg text-gray-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt blanditiis quia vero assumenda error.</p>
                 <div className="flex items-center justify-center gap-4">
                     <Link
-                        className="text-gray-900 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-md text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
+                        className="text-gray-900 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-md text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-700 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
                         to="products"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 mr-2 -ml-1">
@@ -18,7 +18,7 @@ const HomePage = () => {
                         Products
                     </Link>
                     <Link
-                        className="text-gray-900 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-md text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
+                        className="text-gray-900 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-md text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-700 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
                         to="users"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 mr-2 -ml-1">

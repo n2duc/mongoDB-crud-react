@@ -1,13 +1,7 @@
-import { useEffect, useState } from "react";
 import axios from "axios";
-import BackButton from "../components/BackButton";
-import SearchInput from "../components/SearchInput";
-import UsersTable from "../components/UsersTable";
-import Button from "../components/Button";
-import { useDebounce, usePopupState } from "../hooks";
-import FormUser from "../components/FormUser";
-import Pagination from "../components/Pagination";
-import usePagination from "../hooks/usePagination";
+import { useEffect, useState } from "react";
+import { useDebounce, usePopupState, usePagination } from "../hooks";
+import { Button, BackButton, SearchInput, UsersTable, Pagination, FormUser } from "../components";
 
 const API_BASE = "http://localhost:5000";
 const DEFAULT_VALUE = {
@@ -91,7 +85,7 @@ const UserPage = () => {
 
     const handleFetchUser = async (id) => {
         setUpdatePopup(true);
-        setUserID(id);
+        setUserID(id); //user._id
         try {
             const res = await axios.get(`${API_BASE}/user/${id}`)
             setUpdateData(res.data)
